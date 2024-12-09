@@ -2,6 +2,7 @@
 pkg update -y
 pkg upgrade -y
 N
+N
 pkg install git wget root-repo tigervnc xfce4 xfce4-goodies -y
 pkg install x11-repo python3 dbus -y
 pkg install tigervnc -y
