@@ -6,3 +6,6 @@ Termux Gui
 Usage
 =====
 
+.. code-block:: bash
+
+   bash freebsd
