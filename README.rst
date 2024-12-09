@@ -13,6 +13,9 @@ Install Command
 Usage
 =====
 
+- On Bsd
+
 .. code-block:: bash
 
-   bash freebsd
+   vnc-on
+   vnc-off
