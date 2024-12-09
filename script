@@ -1,0 +1,30 @@
+#!/bin/bash
+pkg update -y
+pkg upgrade -y
+pkg install git wget root-repo tigervnc xfce4 xfce4-goodies -y
+pkg install x11-repo python3 dbus -y
+pkg install tigervnc -y
+curl -L https://raw.githubusercontent.com/bajrangCoder/websockify_rs/main/install.sh | bash
+touch ~/.vnc/xstartup
+python3 script.py
+chmod +x ~/.vnc/xstartup
+# Very Important Thing
+
+cat > ~/.vnc/xstartup << 'EOF'
+#!/bin/sh
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+startxfce4 &
+EOF
+
+# It's Optional
+
+cat >> ~/.bashrc << 'EOF'
+# Custom VNC server alias
+alias vnc-on="vncserver :1"
+EOF
+
+cat >> ~/.bashrc << 'EOF'
+# Custom VNC server alias
+alias vnc-off="vncserver -kill :1"
+EOF
