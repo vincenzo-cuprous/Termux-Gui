@@ -6,7 +6,6 @@ pkg install x11-repo python3 dbus -y
 pkg install tigervnc -y
 curl -L https://raw.githubusercontent.com/bajrangCoder/websockify_rs/main/install.sh | bash
 touch ~/.vnc/xstartup
-python3 script.py
 chmod +x ~/.vnc/xstartup
 # Very Important Thing
 
