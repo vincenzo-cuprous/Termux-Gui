@@ -10,6 +10,7 @@ Install Command
 
    pkg upgrade -y
    curl https://raw.githubusercontent.com/vincenzo-cuprous/Termux-Gui/main/freebsd | sh
+   vncserver
 
 Usage
 =====
