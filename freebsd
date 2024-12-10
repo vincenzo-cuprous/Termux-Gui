@@ -4,7 +4,7 @@ pkg install git wget x11-repo root-repo -y
 pkg install tigervnc xfce4 xfce4-goodies -y &&
 pkg install  python3 dbus -y
 curl -L https://raw.githubusercontent.com/bajrangCoder/websockify_rs/main/install.sh | bash &&
-vncserver
+vncserver &&
 touch ~/.vnc/xstartup
 chmod +x ~/.vnc/xstartup
 # Very Important Thing
