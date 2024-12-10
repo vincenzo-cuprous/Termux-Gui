@@ -16,6 +16,10 @@ Install Command
 
 - Additionals
 
+.. code-block:: bash
+
+ bash additionals
+
 Usage
 =====
 
