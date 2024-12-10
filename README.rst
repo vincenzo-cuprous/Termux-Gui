@@ -24,9 +24,14 @@ Install Command
 Usage
 =====
 
-- On Bsd
+- On
 
 .. code-block:: bash
 
    vnc-on
+
+- Off
+
+.. code-block:: bash
+
    vnc-off
