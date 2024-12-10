@@ -19,7 +19,7 @@ Install Command
 .. code-block:: bash
 
  curl https://raw.githubusercontent.com/vincenzo-cuprous/Termux-Gui/main/additionals | sh
-termux-setup-storage
+ termux-setup-storage
 
 Usage
 =====
