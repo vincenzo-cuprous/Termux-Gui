@@ -18,7 +18,7 @@ Install Command
 
 .. code-block:: bash
 
- bash additionals
+ curl https://raw.githubusercontent.com/vincenzo-cuprous/Termux-Gui/main/additionals | sh
 
 Usage
 =====
