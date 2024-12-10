@@ -6,9 +6,9 @@ Termux Gui
 Install Command
 ===============
 
-.. code-block:: bash
-
 - Dependencies
+
+.. code-block:: bash
 
    pkg upgrade -y
    curl https://raw.githubusercontent.com/vincenzo-cuprous/Termux-Gui/main/freebsd | sh
