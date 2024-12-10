@@ -8,9 +8,13 @@ Install Command
 
 .. code-block:: bash
 
+- Dependencies
+
    pkg upgrade -y
    curl https://raw.githubusercontent.com/vincenzo-cuprous/Termux-Gui/main/freebsd | sh
    vncserver
+
+- Additionals
 
 Usage
 =====
