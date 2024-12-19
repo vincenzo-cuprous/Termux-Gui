@@ -40,10 +40,10 @@ Install Command
 .. code-block:: bash
 
  pkg install android-tools
-adb pair
-adb connect
-adb shell "/system/bin/device_config set_sync_disabled_for_tests persistent"
-adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"
+ adb pair
+ adb connect
+ adb shell "/system/bin/device_config set_sync_disabled_for_tests persistent"
+ adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"
 
 
 
