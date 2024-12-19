@@ -26,7 +26,7 @@ Install Command
 
 .. code-block:: bash
 
- curl https://raw.githubusercontent.com/vincenzo-cuprous/Termux-Gui/main/Arch_Linux/init.sh | bash
+ curl https://raw.githubusercontent.com/vincenzo-cuprous/Termux-Gui/main/Arch_Linux/init | bash
 
 - Additionals
 
