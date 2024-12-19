@@ -35,6 +35,17 @@ Install Command
  curl https://raw.githubusercontent.com/vincenzo-cuprous/Termux-Gui/main/Arch_Linux/arch | bash
  curl https://raw.githubusercontent.com/vincenzo-cuprous/Termux-Gui/main/Arch_Linux/user | bash
 
+- Phantom Process Error Fixed
+
+.. code-block:: bash
+
+ pkg install android-tools
+adb pair
+adb connect
+adb shell "/system/bin/device_config set_sync_disabled_for_tests persistent"
+adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"
+
+
 
 Usage
 =====
