@@ -25,6 +25,8 @@ Install Command
 
 .. code-block:: bash
 
+ apt update
+ apt upgrade -y
  curl https://raw.githubusercontent.com/vincenzo-cuprous/Termux-Gui/main/Arch_Linux/init.sh | bash
 
 
