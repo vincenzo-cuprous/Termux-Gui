@@ -6,5 +6,3 @@ pkg update ;
 pkg update ;
 pkg upgrade -y ;
 #pkg install fish proot proot-distro root-repo x11-repo -y ;
-pkg install fish ;
-#pkg install proot ;
