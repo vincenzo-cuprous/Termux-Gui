@@ -6,7 +6,8 @@ Termux Gui
 Install Command
 ===============
 
-- Dependencies
+
+- For Free Bsd
 
 .. code-block:: bash
 
@@ -20,6 +21,8 @@ Install Command
 
  curl https://raw.githubusercontent.com/vincenzo-cuprous/Termux-Gui/main/additionals | sh
  termux-setup-storage
+- For Arch Linux
+
 
 Usage
 =====
