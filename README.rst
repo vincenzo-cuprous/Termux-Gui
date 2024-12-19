@@ -23,6 +23,10 @@ Install Command
  termux-setup-storage
 - For Arch Linux
 
+.. code-block:: bash
+
+ curl
+
 
 Usage
 =====
