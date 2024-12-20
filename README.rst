@@ -76,8 +76,18 @@ Usage
 
    vnc-on
 
+.. code-block:: bash
+
+   # Alternatively 
+   vncserver :1
+
 - Off
 
 .. code-block:: bash
 
    vnc-off
+
+.. code-block:: bash
+
+   # Alternatively 
+   vncserver -kill :1
