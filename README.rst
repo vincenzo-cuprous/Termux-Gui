@@ -53,8 +53,17 @@ Phantom Process Error Fixed
 .. code-block:: bash
 
  pkg install android-tools
+
+.. code-block:: bash
+
  adb pair
+
+.. code-block:: bash
+
  adb connect
+
+.. code-block::bash
+
  adb shell "/system/bin/device_config set_sync_disabled_for_tests persistent"
  adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"
 
