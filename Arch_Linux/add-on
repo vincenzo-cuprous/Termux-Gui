@@ -1,3 +1,4 @@
+#!/bin/bash
 vncpasswd ;
 touch ~/.vnc/xstartup ;
 chmod +x ~/.vnc/xstartup ;
