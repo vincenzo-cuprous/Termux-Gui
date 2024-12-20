@@ -70,7 +70,13 @@ Phantom Process Error Fixed
 Usage
 =====
 
-- On
+- Enter On Distro
+
+.. code-block:: bash
+
+   pd login distro-name -- user name
+
+- Vnc On
 
 .. code-block:: bash
 
@@ -81,7 +87,7 @@ Usage
    # Alternatively 
    vncserver :1
 
-- Off
+- Vnc Off
 
 .. code-block:: bash
 
