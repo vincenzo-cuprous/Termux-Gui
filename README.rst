@@ -40,7 +40,7 @@ Install Command
 
 .. code-block:: bash
 
- curl https://raw.githubusercontent.com/vincenzo-cuprous/Termux-Gui/main/Arch_Linux/add-on | sh
+ curl https://raw.githubusercontent.com/vincenzo-cuprous/Termux-Gui/main/Arch_Linux/add-on | bash
  
  
 
