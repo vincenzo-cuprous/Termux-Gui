@@ -1,4 +1,4 @@
-
+#!/bin/bash
 vncpasswd ;
 mkdir ~/.vnc -p ;
 touch ~/.vnc/xstartup ;
