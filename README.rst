@@ -81,7 +81,12 @@ Usage
 .. code-block:: bash
 
    pd login archlinux --user cazzano
+
+.. code-block:: bash
+
    pd login ubuntu --user cazzano
+.. code-block:: bash
+
    pd login fedora --user cazzano
 
 - Check Available Distros
