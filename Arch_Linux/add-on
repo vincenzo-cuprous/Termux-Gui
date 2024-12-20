@@ -1,9 +1,12 @@
 #!/bin/bash
-mkdir ~/.vnc                                    touch ~/.vnc/xstartup
+mkdir ~/.vnc   
+touch ~/.vnc/xstartup
 chmod +x ~/.vnc/xstartup
 # Very Important Thing
 
-cat > ~/.vnc/xstartup << 'EOF'                  #!/bin/sh                                       unset SESSION_MANAGER
+cat > ~/.vnc/xstartup << 'EOF'                  
+#!/bin/sh                                      
+unset SESSION_MANAGER
 unset DBUS_SESSION_BUS_ADDRESS
 startxfce4 &
 EOF
@@ -12,7 +15,10 @@ EOF
 
 cat >> ~/.bashrc << 'EOF'
 # Custom VNC server alias
-alias vnc-on="vncserver :1"                     EOF
+alias vnc-on="vncserver :1"                    
+EOF
 
-cat >> ~/.bashrc << 'EOF'                       # Custom VNC server alias                       alias vnc-off="vncserver -kill :1"
+cat >> ~/.bashrc << 'EOF'                      
+# Custom VNC server alias                     
+alias vnc-off="vncserver -kill :1"
 EOF
