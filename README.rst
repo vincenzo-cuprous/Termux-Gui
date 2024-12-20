@@ -38,6 +38,11 @@ Install Command
 
  curl https://raw.githubusercontent.com/vincenzo-cuprous/Termux-Gui/main/Arch_Linux/user | bash
 
+.. code-block:: bash
+ curl https://raw.githubusercontent.com/vincenzo-cuprous/Termux-Gui/main/Arch_Linux/add-on | bash
+ 
+ 
+
 Phantom Process Error Fixed
 ===========================
 
