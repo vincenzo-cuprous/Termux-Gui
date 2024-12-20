@@ -76,6 +76,21 @@ Usage
 
    pd login distro-name -- user name
 
+- Popular Examples
+
+.. code-block:: bash
+
+   pd login archlinux --user cazzano
+   pd login ubuntu --user cazzano
+   pd login fedora --user cazzano
+
+- Check Available Distros
+
+
+.. code-block:: bash
+
+   pd list
+
 - Vnc On
 
 .. code-block:: bash
