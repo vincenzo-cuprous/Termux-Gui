@@ -1,6 +1,6 @@
 
 vncpasswd ;
-mkdir ~/.vnc -p
+mkdir ~/.vnc -p ;
 touch ~/.vnc/xstartup ;
 chmod +x ~/.vnc/xstartup ;
 # Very Important Thing
