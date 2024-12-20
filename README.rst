@@ -40,7 +40,8 @@ Install Command
 
 .. code-block:: bash
 
- curl https://raw.githubusercontent.com/vincenzo-cuprous/Termux-Gui/main/Arch_Linux/add-on | bash
+ vncpasswd ;
+ curl https://raw.githubusercontent.com/vincenzo-cuprous/Termux-Gui/main/Arch_Linux/add-on | bash ;
  
  
 
