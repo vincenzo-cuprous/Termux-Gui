@@ -1,17 +1,23 @@
 
-# Colors for output                           
-RED='\033[0;31m'                                
-GREEN='\033[0;32m'                              
-YELLOW='\033[1;33m'                           
-NC='\033[0m' # No Color                                                                      
-# Function to print colored messages            
-print_message() {                                
-echo -e "${2}${1}${NC}"                     }                                                                                            
-# Check if script is run as root              
-if [ "$EUID" -ne 0 ]; then                        
-print_message "This script must be run as root (use su - or sudo -i)" "$RED"                
-exit 1                                      fi                                                                                             
-# Function to check if command was successful  
+
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+
+# Function to print colored messages
+print_message() {
+    echo -e "${2}${1}${NC}"
+}
+
+# Check if script is run as root
+if [ "$EUID" -ne 0 ]; then
+    print_message "This script must be run as root (use su - or sudo -i)" "$RED"
+    exit 1
+fi
+
+# Function to check if command was successful
 check_status() {
     if [ $? -eq 0 ]; then
         print_message "✓ $1 successful" "$GREEN"
@@ -20,6 +26,11 @@ check_status() {
         exit 1
     fi
 }
+
+# Backup sudoers file
+cp /etc/sudoers /etc/sudoers.backup
+check_status "Sudoers backup"
+
 # Prompt for username
 print_message "Enter the username to grant administrative privileges:" "$YELLOW"
 read username
@@ -41,21 +52,32 @@ if ! grep -q "^$username" /etc/sudoers; then
     check_status "Adding to sudoers file"
 fi
 
-# Verify sudo group
-usermod -aG wheel "$username"
+# Verify sudo group membership based on distribution
+if command -v apt-get >/dev/null 2>&1; then
+    # Debian/Ubuntu
+    usermod -aG sudo "$username"
+elif command -v dnf >/dev/null 2>&1 || command -v yum >/dev/null 2>&1; then
+    # RHEL/CentOS/Fedora
+    usermod -aG wheel "$username"
+fi
+check_status "Adding user to sudo/wheel group"
+
 # Set correct permissions on sudoers
 chmod 440 /etc/sudoers
 check_status "Setting sudoers permissions"
 
-# Update sudoers timestamp timeout (optional)
-echo "Defaults timestamp_timeout=30" >> /etc/sudoers.d/timeout
+# Update sudoers timestamp timeout
+if [ ! -d "/etc/sudoers.d" ]; then
+    mkdir -p /etc/sudoers.d
+fi
+echo "Defaults timestamp_timeout=30" > /etc/sudoers.d/timeout
 chmod 440 /etc/sudoers.d/timeout
+check_status "Setting sudo timeout"
 
 print_message "\nSetup Complete! Summary:" "$GREEN"
-print_message "• System has been fully updated" "$GREEN"
 print_message "• User $username has been granted sudo privileges" "$GREEN"
 print_message "• Sudoers file has been backed up" "$GREEN"
-print_message "• All package caches have been cleaned" "$GREEN"
+print_message "• Sudo timeout has been set to 30 minutes" "$GREEN"
 
 print_message "\nPlease log out and log back in for all changes to take effect." "$YELLOW"
 print_message "After logging back in, test with: sudo whoami" "$YELLOW"
