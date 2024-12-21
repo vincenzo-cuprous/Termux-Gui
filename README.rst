@@ -52,7 +52,7 @@ Phantom Process Error Fixed
 
 .. code-block:: bash
 
- pkg install android-tools
+ pkg install android-tools -y
 
 .. code-block:: bash
 
